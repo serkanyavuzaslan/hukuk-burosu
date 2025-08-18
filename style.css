@@ -8,8 +8,9 @@
     box-sizing: border-box;
     user-select: none;
 }
+
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;     /* bunu menü kısmının istenilen sayfaya geçmesi için ekledim */
 }
 /* header kısmı css */
 .header{
@@ -65,7 +66,7 @@ html {
   display: flex;
   gap: 50px;
   margin: 30px 0;
-  flex-wrap: wrap; /* mobilde alt alta geçer */
+  flex-wrap: wrap; /* mobilde alt alta geciyor */
 }
 
 .counter-card {
@@ -81,7 +82,6 @@ html {
 }
 
 .counter-card:hover {
-  /* transform: translateY(-5px); */
   background-color: #2B3645;
 }
 
@@ -100,7 +100,7 @@ html {
 
 
 .main .text button{
-    padding: 1vw 3vw;
+    padding: 15px 35px;
     border-radius: 10px;
     border: none;
     color: white;
@@ -110,12 +110,12 @@ html {
     font-weight: bold;
     position: relative;
     top: 10px;
-    left: 700px;
+    left: 780px;
 }
 .main .text button:hover{
     background-color: #2B3645;
-    transform: translateX(10px);
-    transition: 0.5s;
+    transform: translateX(px);
+    transition: 0.7s;
 }
 .main .img img{
     max-width: 100%;
@@ -124,8 +124,76 @@ html {
     position: relative;
     left: 10px;
 }
+/* responsive kısmı */
+/* tablet icin  */
+@media (max-width: 992px) {
+  header {
+    padding: 15px 30px;
+  }
+
+  header .links ul {
+    gap: 20px;
+  }
+
+  .main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main .text h1 {
+    font-size: 32px;
+  }
+
+  .main .text p {
+    font-size: 16px;
+  }
+
+  .sayisal {
+    justify-content: center;
+  }
+}
+
+/* telefon icin */
+@media (max-width: 576px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .logo img {
+    max-width: 120px;
+    margin-bottom: 15px;
+  }
+
+  header .links ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main {
+    padding: 30px 15px;
+  }
+
+  .main .text h1 {
+    font-size: 24px;
+  }
+
+  .main .text p {
+    font-size: 14px;
+  }
+
+  .counter-card {
+    min-width: 100px;
+    padding: 15px;
+  }
+
+  .counter-card h3 {
+    font-size: 24px;
+  }
+}
 
 
+/* ekip kısmı */
 #team {
   padding: 80px 20px;
   background-color: #f5f5f5;
@@ -139,7 +207,7 @@ html {
   text-transform: uppercase;
   letter-spacing: 0.2vw;
   position: relative;
-  top: 20px;
+  top: 30px;
 }
 
 .team-grid {
@@ -156,6 +224,8 @@ html {
   height: 350px;
   perspective: 1000px;
   cursor: pointer;
+  position: relative;
+  top: 25px;
 }
 
 .card-content {
@@ -206,6 +276,7 @@ html {
 .card-front p {
   font-size: 16px;
   color: #555;
+  position: relative;
 }
 
 /* arka yüz */
@@ -234,8 +305,8 @@ html {
 }
 
 .card-back a:hover {
-  background: #2B3645;
-  color: whitesmoke;
+  background: whitesmoke;
+  color: #2B3645;
 }
 
 /* alt açıklama metni */
@@ -251,10 +322,12 @@ html {
   font-size: 20px;
   color: #555;
   line-height: 1.6;
+  position: relative;
+  top: 35px;
 }
 
 
-/* services kısmı */
+/* hizmetler kısmı */
 .services {
   margin: 50px auto;
   padding: 0 20px;
@@ -267,6 +340,7 @@ html {
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
+  color: #1a1a40;
 }
 
 .services p {
@@ -324,7 +398,7 @@ html {
   font-size: 1.1rem;
 }
 
-/* Responsive */
+/* responsive */
 @media (max-width: 768px) {
   .service-row {
     flex-direction: column;
@@ -349,6 +423,7 @@ html {
     letter-spacing: 2.5px;
     position: relative;
     bottom: 30px;
+    color: #1a1a40;
 }
 .about .text p{
     line-height: 1.7;
@@ -373,7 +448,7 @@ html {
   letter-spacing: 2.5px;
   text-transform: uppercase;
   margin-bottom: 40px;
-  color: #222;
+  color:#1a1a40;
 }
 
 .contact-container {
@@ -381,7 +456,7 @@ html {
   width: 100%;
   margin: 0;
   padding: 0;
-  align-items: stretch; /* kolonların aynı yükseklikte olması için. */
+  align-items: stretch; /* kolonların aynı yükseklikte olması için yaptım */
 }
 
 .contact-info {
@@ -450,7 +525,7 @@ html {
   border: 0;
 }
 
-/* Responsive */
+/* responsive */
 @media (max-width: 900px) {
   .contact-container {
     flex-direction: column;
