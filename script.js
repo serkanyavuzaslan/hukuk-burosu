@@ -12,7 +12,7 @@ function animateCounter(id, end) {
 }
 
 window.addEventListener('load', () => {
-  animateCounter('icra', 7800);
+  animateCounter('icra', 7853);
   animateCounter('vekalet', 874);
   animateCounter('dava', 4344);
 });
