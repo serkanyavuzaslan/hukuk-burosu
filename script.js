@@ -1,3 +1,5 @@
+// anasayfada bulunan sayilarin otomatik artmasi icin.
+
 function animateCounter(id, end) {
   let current = 0;
   const increment = Math.ceil(end / 100);
